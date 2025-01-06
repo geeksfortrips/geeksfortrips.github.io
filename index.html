@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeeksForTrips</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            position: relative;
+            overflow: hidden;
+        }
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            height: 300px;
+        }
+        .carousel img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: none;
+        }
+        .carousel img.active {
+            display: block;
+        }
+        .carousel-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        .carousel-buttons {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .carousel-buttons button {
+            background: white;
+            border: none;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            cursor: pointer;
+            opacity: 0.5;
+        }
+        .carousel-buttons button.active {
+            opacity: 1;
+        }
+        nav {
+            background: #004080;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin: 2rem auto;
+            max-width: 900px;
+            padding: 1rem;
+        }
+        .section h2 {
+            border-bottom: 2px solid #0073e6;
+            padding-bottom: 0.5rem;
+        }
+        .itineraries {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .itinerary {
+            text-align: center;
+            width: 30%;
+        }
+        .itinerary img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .previous-itineraries {
+            list-style-type: none;
+            padding: 0;
+        }
+        .previous-itineraries li {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            background: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .previous-itineraries li h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #004080;
+        }
+        footer {
+            background: #004080;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+            .social-links a {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 25px;
+        background: linear-gradient(45deg, #6a5acd, #00bfff);
+        color: white;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .social-links a:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="carousel">
+            <img src="images/carousel1.jpg" alt="Carousel Image 1" class="active">
+            <img src="images/carousel2.jpg" alt="Carousel Image 2">
+            <img src="images/carousel3.jpg" alt="Carousel Image 3">
+            <div class="carousel-text">GeeksForTrips</div>
+            <div class="carousel-buttons">
+                <button class="active"></button>
+                <button></button>
+                <button></button>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#upcoming-itineraries">Upcoming Itineraries</a>
+        <a href="#previous-itineraries">Previous Itineraries</a>
+        <a href="#social-media">Social Media</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="section" id="upcoming-itineraries">
+        <h2>Upcoming Itineraries</h2>
+        <div class="itineraries">
+            <div class="itinerary">
+                <img src="images/goa.jpg" alt="Goa Trip">
+                <p><a href="itineraries/trip1.pdf" target="_blank">Trip to Goa - January 2025</a></p>
+            </div>
+            <div class="itinerary">
+                <img src="images/manali.jpg" alt="Manali Trip">
+                <p><a href="itineraries/trip2.pdf" target="_blank">Trip to Manali - February 2025</a></p>
+            </div>
+            <div class="itinerary">
+                <img src="images/kerala.jpg" alt="Kerala Trip">
+                <p><a href="itineraries/trip3.pdf" target="_blank">Trip to Kerala - March 2025</a></p>
+            </div>
+            <div class="itinerary">
+                <img src="images/ladakh.jpg" alt="Ladakh Trip">
+                <p><a href="itineraries/trip4.pdf" target="_blank">Trip to Ladakh - April 2025</a></p>
+            </div>
+            <div class="itinerary">
+                <img src="images/andamans.jpg" alt="Andamans Trip">
+                <p><a href="itineraries/trip5.pdf" target="_blank">Trip to Andamans - May 2025</a></p>
+            </div>
+            <div class="itinerary">
+                <img src="images/ooty.jpg" alt="Ooty Trip">
+                <p><a href="itineraries/trip6.pdf" target="_blank">Trip to Ooty - June 2025</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="previous-itineraries">
+        <h2>Previous Itineraries</h2>
+        <ul class="previous-itineraries">
+            <li>
+                <h3>Trip to Jaipur - November 2024</h3>
+            </li>
+            <li>
+                <h3>Trip to Rishikesh - October 2024</h3>
+            </li>
+            <li>
+                <h3>Trip to Shimla - September 2024</h3>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section" id="social-media">
+        <h2>Follow Us on Social Media</h2>
+        <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <a href="https://www.twitter.com" target="_blank">Twitter</a>
+            <a href="https://www.youtube.com" target="_blank">YouTube</a>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <p>Contact us: geeksfortrips@example.com | Phone: +91-12345-67890</p>
+        <p>&copy; 2025 GeeksForTrips. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const images = document.querySelectorAll('.carousel img');
+        const buttons = document.querySelectorAll('.carousel-buttons button');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+                buttons[i].classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showSlide(currentIndex);
+        }
+
+        buttons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                currentIndex = index;
+                showSlide(currentIndex);
+            });
+        });
+
+        setInterval(nextSlide, 2000);
+    </script>
+</body>
+</html>
