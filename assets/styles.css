@@ -14,18 +14,25 @@ header {
     position: relative;
     max-width: 100%;
     height: 60vh;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .carousel img {
     width: 100%;
     height: 60vh;
     object-fit: cover;
-    display: none;
-    opacity: 0.9;
+    flex-shrink: 0; /* Prevent images from shrinking */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 .carousel img.active {
-    display: block;
+    opacity: 1;
 }
 
 /* Title Styling */
