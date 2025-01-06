@@ -1,0 +1,271 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    height: 60vh;
+}
+
+.carousel img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    display: none;
+    opacity: 0.9;
+}
+
+.carousel img.active {
+    display: block;
+}
+
+/* Title Styling */
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-family: orbitron;
+}
+
+.carousel-text .title-primary {
+    font-size: 2.5rem;
+    font-weight: 700;
+    /* Bright professional color */
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.carousel-text .title-secondary {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #00bfff;
+    /* Contrasting white for elegance */
+    text-transform: uppercase;
+    margin-left: 0.2rem;
+}
+
+
+.carousel-buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-buttons button {
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.carousel-buttons button.active {
+    opacity: 1;
+}
+
+nav {
+    background: #004080;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+nav a {
+    color: white;
+    margin: 0 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    margin: 2rem auto;
+    max-width: 900px;
+    padding: 1rem;
+}
+
+.section h2 {
+    border-bottom: 2px solid #0073e6;
+    padding-bottom: 0.5rem;
+}
+
+/* Section Heading Styling */
+.section-heading {
+    /* font-family: 'Merriweather', serif; */
+    font-size: 2rem; /* Slightly larger font size */
+    font-weight: 700; /* Bold for emphasis */
+    color: #004080; /* Professional navy blue color */
+    margin-bottom: 1rem;
+    text-transform: capitalize; /* Clean and consistent capitalization */
+    border-bottom: 2px solid #0073e6;
+    padding-bottom: 0.5rem;
+}
+
+
+
+
+.itineraries {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.itinerary {
+    text-align: center;
+    width: 30%;
+    transition: transform 0.3s;
+}
+
+.itinerary img {
+    width: 100%;
+    height: 10vh;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.itinerary:hover {
+    transform: scale(1.05);
+}
+
+.itinerary-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #004080; /* Elegant navy blue color */
+    text-transform: uppercase;
+}
+
+.itinerary-title a {
+    text-decoration: none;
+    color: inherit; /* Matches parent color */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.itinerary-title a:hover {
+    color: #00bfff; /* Light sky blue for hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+
+.previous-itineraries {
+    list-style-type: none;
+    padding: 0;
+}
+
+.previous-itineraries li {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.previous-itineraries li h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #004080;
+}
+
+.previous-itineraries li a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+footer {
+    background: #004080;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #6a5acd, #00bfff);
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .itinerary {
+        width: 45%;
+    }
+
+    .carousel {
+        height: 30vh;
+    }
+    
+    .carousel img {
+        height: 30vh;
+    }
+
+    .carousel-text .title-primary,
+    .carousel-text .title-secondary {
+        font-size: 1.8rem;
+        /* Scaled-down for smaller screens */
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 0.5rem 0;
+    }
+
+    footer {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .itinerary {
+        width: 100%;
+    }
+
+    .carousel-text {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+}
