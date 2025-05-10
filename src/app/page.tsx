@@ -375,7 +375,7 @@ function ItinerariesSection() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  let defaultCount = isMobile ? 2 : 3;
+  const defaultCount = isMobile ? 2 : 3;
   const visibleItineraries = showAll ? itineraries : itineraries.slice(0, defaultCount);
 
   return (
@@ -495,7 +495,7 @@ function GallerySection() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  let defaultCount = isMobile ? 2 : 3;
+  const defaultCount = isMobile ? 2 : 3;
   const visibleTrips = showAll ? trips : trips.slice(0, defaultCount);
 
   return (
