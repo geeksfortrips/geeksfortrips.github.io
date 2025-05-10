@@ -2,7 +2,7 @@
   "name": "geeksfortrips",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://iamtatha.github.io/geeksfortrips.github.io",
+  "homepage": "https://geeksfortrips.github.io/geeksfortrips.github.io",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
