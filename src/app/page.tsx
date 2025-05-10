@@ -306,7 +306,7 @@ export default function Home() {
           </div>
         </div>
         <div className="mt-6 sm:mt-8 text-center text-xs text-gray-500">
-          &copy; {new Date().getFullYear()} GeeksforTrips. All rights reserved. <span className="mx-2">|</span> Founded by <span className="font-semibold text-white">Tathagata Dey</span> | Founder's Media: <a href="https://www.instagram.com/epistemophilic_nerd/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Instagram</a>
+          &copy; {new Date().getFullYear()} GeeksforTrips. All rights reserved. <span className="mx-2">|</span> Founded by <span className="font-semibold text-white">Tathagata Dey</span> | Founder&apos;s Media: <a href="https://www.instagram.com/epistemophilic_nerd/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Instagram</a>
         </div>
       </footer>
     </div>
@@ -399,7 +399,13 @@ function ItinerariesSection() {
             >
               <div className={`itinirary-hero${expandedIdx === idx ? ' expanded' : ''}`}>
                 <div className="itinirary-image w-full aspect-[3/2] bg-gray-200 overflow-hidden">
-                  <img src={it.image} alt={it.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200" />
+                  <Image
+                    src={it.image}
+                    alt={it.title}
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+                  />
                 </div>
                 <div className="p-6">
                   <h3 className="itinirary-title text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">{it.title}</h3>
@@ -506,7 +512,13 @@ function GallerySection() {
             >
               <div className="trip-hero">
                 <div className="trip-image w-full aspect-[3/2] bg-gray-200 overflow-hidden">
-                  <img src={trip.image} alt={trip.title} className="w-full h-full object-cover" />
+                  <Image
+                    src={trip.image}
+                    alt={trip.title}
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="trip-title p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">{trip.title}</h3>

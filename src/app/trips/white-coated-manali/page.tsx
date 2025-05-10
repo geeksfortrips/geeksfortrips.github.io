@@ -79,7 +79,7 @@ export default function WhiteCoatedManali() {
 
           {/* Quick Links */}
           <div className="flex flex-wrap gap-4 sm:gap-6 justify-center text-sm mb-4 md:mb-0">
-            <a href="/" className="hover:text-white transition">Home Page</a>
+            <Link href="/" className="hover:text-white transition">Home Page</Link>
           </div>
 
           {/* Social Media */}
@@ -105,7 +105,7 @@ export default function WhiteCoatedManali() {
           </div>
         </div>
         <div className="mt-6 sm:mt-8 text-center text-xs text-gray-500">
-          &copy; {new Date().getFullYear()} GeeksforTrips. All rights reserved. <span className="mx-2">|</span> Founded by <span className="font-semibold text-white">Tathagata Dey</span> | Founder's Media: <a href="https://www.instagram.com/epistemophilic_nerd/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Instagram</a>
+          &copy; {new Date().getFullYear()} GeeksforTrips. All rights reserved. <span className="mx-2">|</span> Founded by <span className="font-semibold text-white">Tathagata Dey</span> | Founder&apos;s Media: <a href="https://www.instagram.com/epistemophilic_nerd/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Instagram</a>
         </div>
       </footer>
       </div>
