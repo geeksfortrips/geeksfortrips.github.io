@@ -1,13 +1,179 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
-} 
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', 'Geist', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.slick-slider,
+.slick-list,
+.slick-track,
+.slick-slide > div {
+  height: 100%;
+}
+
+.slick-slide > div {
+  height: 100%;
+}
+
+.slick-dots {
+  bottom: 24px;
+}
+
+.slick-dots li button:before {
+  color: #fff;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #fff;
+}
+
+/* Hide arrows */
+.slick-arrow {
+  display: none !important;
+}
+
+/* Hero overlay text shadow for readability */
+.hero-overlay-text {
+  text-shadow: 0 2px 16px rgba(0,0,0,0.25), 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.overlay-container {
+  margin-left: 20%;
+  margin-bottom: 10%;
+}
+
+/* Button style for Join Us */
+.join-btn {
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.social-icon .icon-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  width: 3.5rem;
+  height: 3.5rem;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+  margin: 0 auto;
+  transition: background 0.2s;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    display: flex;
+    align-items: left;
+}
+
+  .nav-name {
+    display: inline;
+    /* background-color: yellow; */
+    margin-top: 5%;
+  }
+
+  .nav-icons {
+    display: none;
+  }
+
+  .nav-lang {
+    display: none;
+    /* background-color: yellow; */
+  }
+
+  .hero {
+    height: 50vh;
+  }
+
+  .keen-slider {
+    height: 40vh;
+  }
+
+  .overlay-container {
+    margin: 0;
+    /* top: 37%; */
+    height: 18vh;
+    padding-left: 15%;
+  }
+
+  .overlay-text {
+    font-size: 20px;
+  }
+
+  .carousel-dots {
+    display: none;
+  }
+
+  .join-us {
+    width: 50%;
+  }
+
+  .explore-button {
+    display: none;
+  }
+
+  .itinirary-hero {
+    padding: 0;
+    margin: 0;
+    height: 29vh;
+  }
+
+  .itinirary-hero.expanded {
+    height: 36vh;
+  }
+
+  .itinirary-image {
+    height: 20vh;
+  }
+
+  .itinirary-title {
+    font-size: 18px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .trip-hero {
+    height: 24vh;
+  }
+
+  .trip-image {
+    height: 18vh;
+  }
+
+  .social-icon .icon-bg {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
