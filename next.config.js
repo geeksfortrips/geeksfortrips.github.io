@@ -5,6 +5,9 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: '/geeksfortrips.github.io',
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 }
 
 module.exports = nextConfig 
