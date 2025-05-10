@@ -1,14 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
     unoptimized: true,
   },
-  basePath: '/geeksfortrips.github.io',
-  eslint: {
-    ignoreDuringBuilds: true,
+  experimental: {
+    serverActions: {},
   },
-  distDir: 'dist',
-}
+};
 
-module.exports = nextConfig 
+module.exports = nextConfig;

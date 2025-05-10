@@ -4,17 +4,18 @@ import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider } from 'keen-slider/react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import './globals.css';
 
 const carouselItems = [
-  { src: '/images/c1.jpg' },
-  { src: '/images/c2.jpg' },
-  { src: '/images/c3.jpg' },
-  { src: '/images/c4.jpg' },
-  { src: '/images/c5.jpg' },
-  { src: '/images/c6.jpg' },
-  { src: '/images/c7.jpg' },
-  { src: '/images/c8.jpg' },
-  { src: '/images/c9.jpg' },
+  { src: '/images/c11.jpg' },
+  { src: '/images/c12.jpg' },
+  { src: '/images/c13.jpg' },
+  { src: '/images/c14.jpg' },
+  { src: '/images/c15.jpg' },
+  { src: '/images/c16.jpg' },
+  { src: '/images/c17.jpg' },
+  { src: '/images/c18.jpg' },
+  { src: '/images/c19.jpg' },
   // { src: '/images/c1.jpg', label: 'Discover More 1' },
   // { src: '/images/c2.jpg', label: 'Discover More 2' },
   // { src: '/images/c3.jpg', label: 'Discover More 3' },
@@ -115,13 +116,13 @@ export default function Home() {
         <div ref={sliderRef} className="keen-slider absolute inset-0 w-full h-full min-h-[400px] z-0">
           {carouselItems.map((item, idx) => (
             <div key={idx} className="keen-slider__slide relative w-full h-full min-h-[400px]">
-              <Image
+            <Image
                 src={item.src}
                 alt={`c${idx + 1}`}
-                fill
-                className="object-cover"
+              fill
+              className="object-cover"
                 priority={idx === 0}
-              />
+            />
               <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent" />
             </div>
           ))}
@@ -146,11 +147,11 @@ export default function Home() {
             </button>
           </div>
           <div className="explore-button flex w-full justify-between items-center text-xs sm:text-base">
-            <span className="text-white/60 tracking-wide">[About Us]</span>
-            <a href="#about" className="text-white/80 flex items-center hover:underline">
+            {/* <span className="text-white/60 tracking-wide">[About Us]</span> */}
+            {/* <a href="#about" className="text-white/80 flex items-center hover:underline">
               Explore More
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
-            </a>
+            </a> */}
           </div>
         </div>
         {/* Carousel Dots */}
@@ -174,7 +175,7 @@ export default function Home() {
             It all began with a single journey—a trip to the land of fire and ice that sparked a profound love for Iceland.<br />
             Enchanted by its rugged beauty and rich culture, we knew we had found something truly special.
           </p>
-        </div>
+            </div>
       </section>
 
       {/* Social Media Section */}
@@ -192,7 +193,7 @@ export default function Home() {
                 </svg>
               </span>
             </a>
-            <a href="https://www.instagram.com/accounts/login/?next=/geeksfortrips/" target="_blank" rel="noopener noreferrer" className="social-icon group">
+            <a href="https://www.instagram.com/geeksfortrips/" target="_blank" rel="noopener noreferrer" className="social-icon group">
               <span className="icon-bg bg-white border border-gray-200 group-hover:border-pink-500 shadow-sm group-hover:shadow-md transition-all duration-200">
                 <svg className="w-8 h-8 text-gray-700 group-hover:text-pink-500 opacity-80 group-hover:opacity-100 transition-all duration-200" fill="none" stroke="currentColor" strokeWidth="1.7" viewBox="0 0 24 24">
                   <rect x="2" y="2" width="20" height="20" rx="5"/>
@@ -217,7 +218,7 @@ export default function Home() {
               </span>
             </a>
           </div>
-        </div>
+      </div>
       </section>
 
       {/* Itineraries Section */}
@@ -460,8 +461,8 @@ function GallerySection() {
       title: 'White-coated Manali',
       date: 'December 2024',
       location: 'Himachal',
-      image: '/images/c8.jpg',
-      url: '/trips/white-coated-manali',
+      image: '/images/c18.jpg',
+      url: '/trips/white-coated-manali/',
     },
     // {
     //   title: 'Alpine Adventure',
@@ -500,7 +501,6 @@ function GallerySection() {
             <a
               key={idx}
               href={trip.url}
-              target="_blank"
               rel="noopener noreferrer"
               className="bg-gray-50 rounded-xl shadow p-0 flex flex-col justify-between h-full overflow-hidden hover:shadow-lg transition-shadow duration-200 group"
             >

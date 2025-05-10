@@ -1,21 +1,16 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import GallerySection from './GallerySection';
+import 'keen-slider/keen-slider.min.css';
+import '../../globals.css';
 
 export default function WhiteCoatedManali() {
-  const [showAllImages, setShowAllImages] = useState(false);
-
-  const images = ['/images/c1.jpg', '/images/c2.jpg', '/images/c3.jpg', '/images/c4.jpg', '/images/c5.jpg', '/images/c6.jpg'];
-  const displayedImages = showAllImages ? images : images.slice(0, 3);
-
   return (
-    <div className="min-h-screen bg-white font-sans">
+    <main className="relative min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative w-full h-[60vh] min-h-[320px] flex items-end justify-center overflow-hidden">
+      <div className="relative w-full h-[60vh] min-h-[400px]">
         <Image
-          src="/images/c8.jpg"
+          src="/images/c18.jpg"
           alt="White-coated Manali"
           fill
           className="object-cover object-center"
@@ -28,7 +23,7 @@ export default function WhiteCoatedManali() {
         >
           &larr; Back to Home
         </Link>
-        <div className="relative z-10 pb-10 px-4 text-center w-full">
+        <div className="absolute bottom-0 left-0 right-0 z-10 pb-10 px-4 text-center">
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white drop-shadow-lg mb-2">White-coated Manali</h1>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-2 text-gray-200 text-lg font-medium">
             <span>December 2024</span>
@@ -38,67 +33,45 @@ export default function WhiteCoatedManali() {
         </div>
       </div>
 
-      {/* Trip Details */}
-      <section className="max-w-3xl mx-auto py-10 px-4 sm:px-0">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">About the Trip</h2>
-        <p className="text-gray-700 text-lg mb-6">
-          Experience the magic of Manali draped in a pristine white blanket of snow. This winter adventure is perfect for those seeking breathtaking Himalayan views, cozy mountain stays, and unforgettable memories in the heart of Himachal Pradesh.
-        </p>
-        <h3 className="text-xl font-semibold text-gray-800 mb-2">Trip Highlights</h3>
-        <ul className="list-disc list-inside text-gray-700 mb-6 space-y-1">
-          <li>Snow-capped landscapes and pine forests</li>
-          <li>Guided exploration of Manali and Solang Valley</li>
-          <li>Adventure activities: snow trekking, skiing, and more</li>
-          <li>Local Himachali cuisine and culture</li>
-          <li>Cozy bonfire nights and group fun</li>
-        </ul>
-      </section>
+      <div className="relative z-10 bg-white">
+        {/* Trip Details */}
+        <section className="max-w-3xl mx-auto py-10 px-4 sm:px-6">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">About the Trip</h2>
+          <p className="text-gray-700 text-lg mb-6">
+            Experience the magic of Manali draped in a pristine white blanket of snow. This winter adventure is perfect for those seeking breathtaking Himalayan views, cozy mountain stays, and unforgettable memories in the heart of Himachal Pradesh.
+          </p>
+          <h3 className="text-xl font-semibold text-gray-800 mb-2">Trip Highlights</h3>
+          <ul className="list-disc list-inside text-gray-700 mb-6 space-y-1">
+            <li>Snow-capped landscapes and pine forests</li>
+            <li>Guided exploration of Manali and Solang Valley</li>
+            <li>Adventure activities: snow trekking, skiing, and more</li>
+            <li>Local Himachali cuisine and culture</li>
+            <li>Cozy bonfire nights and group fun</li>
+          </ul>
+        </section>
 
-      {/* Trip Member Instagrams */}
-      <section className="max-w-2xl mx-auto py-8 px-4 sm:px-0">
-        <h2 className="text-xl font-medium text-gray-800 mb-4 text-center">Trip Members</h2>
-        <div className="flex flex-wrap justify-center gap-4">
-          {['jhalani.manas', 'palashmoon_', 'reetan.rdx', 'epistemophilic_nerd'].map((handle, index) => (
-            <a
-              key={index}
-              href={`https://www.instagram.com/${handle}/`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-gray-600 hover:text-gray-900 transition-colors duration-200 font-light tracking-wide"
-            >
-              {handle}
-            </a>
-          ))}
-        </div>
-      </section>
+        {/* Trip Member Instagrams */}
+        <section className="max-w-2xl mx-auto py-8 px-4 sm:px-6">
+          <h2 className="text-xl font-medium text-gray-800 mb-4 text-center">Trip Members</h2>
+          <div className="flex flex-wrap justify-center gap-3">
+            {['@jhalani.manas', '@palashmoon_', '@reetan.rdx', '@epistemophilic_nerd'].map((handle, index) => (
+              <a
+                key={index}
+                href={`https://www.instagram.com/${handle.replace('@', '')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-gray-600 hover:text-blue-700 transition-colors duration-200"
+              >
+                {handle}
+              </a>
+            ))}
+          </div>
+        </section>
 
-      {/* Gallery Photos Section */}
-      <section className="max-w-6xl mx-auto py-10 px-4 sm:px-0" id="gallery">
-        <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Gallery Photos</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {displayedImages.map((src, index) => (
-            <div key={index} className="relative w-full h-64 overflow-hidden rounded-lg shadow-md">
-              <Image
-                src={src}
-                alt={`c${index + 1}`}
-                fill
-                className="object-cover"
-                loading="lazy"
-              />
-            </div>
-          ))}
-        </div>
-        <div className="flex justify-center mt-8">
-          <button
-            className="bg-black text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-gray-800 transition"
-            onClick={() => setShowAllImages(!showAllImages)}
-          >
-            {showAllImages ? 'Show Less' : 'View More'}
-          </button>
-        </div>
-      </section>
+        {/* Gallery Photos Section */}
+        <GallerySection />
 
-            {/* Footer */}
+      {/* Footer */}
       <footer className="w-full bg-neutral-900 text-gray-300 border-t border-neutral-800 py-8 sm:py-10 px-4 mt-10">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
           {/* Site Name */}
@@ -135,6 +108,7 @@ export default function WhiteCoatedManali() {
           &copy; {new Date().getFullYear()} GeeksforTrips. All rights reserved. <span className="mx-2">|</span> Founded by <span className="font-semibold text-white">Tathagata Dey</span> | Founder's Media: <a href="https://www.instagram.com/epistemophilic_nerd/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Instagram</a>
         </div>
       </footer>
-    </div>
+      </div>
+    </main>
   );
 } 
