@@ -172,9 +172,8 @@ export default function Home() {
         <div className="max-w-3xl mx-auto">
           {/* <span className="text-xs text-gray-400 tracking-wide">[About Us]</span> */}
           <p className="mt-4 text-base sm:text-2xl md:text-3xl font-light text-gray-800 leading-relaxed">
-            It all began with a single journey—a trip to find out what we like apart from building magic through code.<br />
-            Hence, this page, with the hope that someday it'll be big enough to take us anywhere we want to go. <br/>
-            Enough of GeeksforGeeks, It's time for GeeksforTrips!
+            It all began with a single journey—a trip to the land of fire and ice that sparked a profound love for Iceland.<br />
+            Enchanted by its rugged beauty and rich culture, we knew we&apos;d found something truly special.
           </p>
             </div>
       </section>

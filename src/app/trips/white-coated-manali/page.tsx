@@ -40,7 +40,7 @@ export default function WhiteCoatedManali() {
           <p className="text-gray-700 text-lg mb-6">
             Experience the magic of Manali draped in a pristine white blanket of snow. We had an amazing time shivering in negative temperatures, rough mountain ranges, unbearbly chilly air, loss of mobile phones and what not. 
             We spent 1 day in Shimla, 2 days in Kasol and 3 days in Manali. Enjoyed the Shimla Mall, and Chirtmas charisma of the queen of hills. The moving on to Kasol, lonely crazy nights. Lost our phone in Parvati River, camped, had bonfire and group fun.
-            Kasol was amazing for a friends' trip, with cozy cafes, river chilly air, Rave party and more. Then we headed to Manali. Dived into white pristine coat of Solang and nearby places. Couldn't witness snowfall in Manali however was worth it.
+            Kasol was amazing for a friends&apos; trip, with cozy cafes, river chilly air, Rave party and more. Then we headed to Manali. Dived into white pristine coat of Solang and nearby places. Couldn&apos;t witness snowfall in Manali however was worth it.
             This winter adventure is perfect for those seeking breathtaking Himalayan views, cozy mountain stays, and unforgettable memories in the heart of Himachal Pradesh.
           </p>
           <h3 className="text-xl font-semibold text-gray-800 mb-2">Trip Highlights</h3>
