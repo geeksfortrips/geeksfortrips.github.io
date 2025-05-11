@@ -10,7 +10,9 @@ const nextConfig = {
     ],
     unoptimized: true,
   },
-  basePath: '',
+  basePath: '/geeksfortrips.github.io',
+  assetPrefix: '/geeksfortrips.github.io',
+  trailingSlash: true,
   experimental: {
     serverActions: {},
   },
