@@ -170,10 +170,11 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="bg-white py-10 sm:py-16 px-4 sm:px-8">
         <div className="max-w-3xl mx-auto">
-          <span className="text-xs text-gray-400 tracking-wide">[About Us]</span>
+          {/* <span className="text-xs text-gray-400 tracking-wide">[About Us]</span> */}
           <p className="mt-4 text-base sm:text-2xl md:text-3xl font-light text-gray-800 leading-relaxed">
-            It all began with a single journey—a trip to the land of fire and ice that sparked a profound love for Iceland.<br />
-            Enchanted by its rugged beauty and rich culture, we knew we had found something truly special.
+            It all began with a single journey—a trip to find out what we like apart from building magic through code.<br />
+            Hence, this page, with the hope that someday it'll be big enough to take us anywhere we want to go. <br/>
+            Enough of GeeksforGeeks, It's time for GeeksforTrips!
           </p>
             </div>
       </section>
@@ -316,53 +317,93 @@ export default function Home() {
 function ItinerariesSection() {
   const itineraries = [
     {
-      title: 'Arctic Adventure',
-      desc: 'Explore glaciers, waterfalls, and the northern lights on this 5-day Icelandic adventure.',
-      date: 'June 2024',
-      location: 'Iceland',
-      image: '/images/c2.jpg',
-      pdf: '/pdfs/arctic-adventure.pdf',
+      title: 'Tropical Escape',
+      desc: 'From bustling Bangkok to serene beaches and vibrant islands, experience the best of Thailand in 6 days.',
+      date: 'October 2025',
+      location: 'Thailand',
+      image: '/images/thailand.jpg',
+      pdf: '/itinerary/thailand.pdf',
     },
     {
-      title: 'Mediterranean Escape',
-      desc: 'Sail the turquoise waters and discover hidden gems along the Mediterranean coast.',
-      date: 'July 2024',
-      location: 'Greece & Italy',
-      image: '/images/c4.jpg',
-      pdf: '/pdfs/mediterranean-escape.pdf',
+      title: 'Desert Wonders',
+      desc: 'Discover ancient forts, golden dunes, and turquoise wadis on this immersive 6-day journey through Oman.',
+      date: 'February 2026',
+      location: 'Oman',
+      image: '/images/oman.jpg',
+      pdf: '/itinerary/oman.pdf',
     },
     {
-      title: 'Himalayan Trek',
-      desc: 'Trek through the majestic Himalayas and experience local culture and breathtaking views.',
-      date: 'September 2024',
-      location: 'Nepal',
-      image: '/images/c7.jpg',
-      pdf: '/pdfs/himalayan-trek.pdf',
+      title: 'Himalayan Odyssey',
+      desc: 'Venture into high-altitude deserts, ancient monasteries, and dramatic mountain passes on this rugged Spiti Valley journey.',
+      date: 'December 2025',
+      location: 'Spiti Valley, Himachal Pradesh',
+      image: '/images/spiti.png',
+      pdf: '/itinerary/spiti.pdf',
     },
     {
-      title: 'Safari Expedition',
-      desc: 'Witness the Big Five and enjoy luxury camps on this unforgettable African safari.',
-      date: 'October 2024',
-      location: 'Kenya & Tanzania',
-      image: '/images/c5.jpg',
-      pdf: '/pdfs/safari-expedition.pdf',
+      title: 'Heaven on Earth',
+      desc: 'Cruise Dal Lake, trek through alpine meadows, and soak in the serene beauty of the Kashmir Valley.',
+      date: 'June 2026',
+      location: 'Kashmir, India',
+      image: '/images/kashmir.png',
+      pdf: '/itinerary/kashmir.pdf',
     },
     {
-      title: 'Patagonia Explorer',
-      desc: 'Hike the wild landscapes of Patagonia and marvel at glaciers and mountain peaks.',
-      date: 'November 2024',
-      location: 'Argentina & Chile',
-      image: '/images/c3.jpg',
-      pdf: '/pdfs/patagonia-explorer.pdf',
+      title: 'Eastern Escape',
+      desc: 'Explore serene monasteries, glacial lakes, and Himalayan villages in this enchanting North Sikkim adventure.',
+      date: 'April 2026',
+      location: 'Sikkim, India',
+      image: '/images/sikkim.png',
+      pdf: '/itinerary/sikkim.pdf',
     },
-    {
-      title: 'Japanese Autumn',
-      desc: "Experience the beauty of Japan's autumn foliage and vibrant city life.",
-      date: 'November 2024',
-      location: 'Japan',
-      image: '/images/c9.jpg',
-      pdf: '/pdfs/japanese-autumn.pdf',
-    },
+    // {
+    //   title: 'Arctic Adventure',
+    //   desc: 'Explore glaciers, waterfalls, and the northern lights on this 5-day Icelandic adventure.',
+    //   date: 'June 2024',
+    //   location: 'Iceland',
+    //   image: '/images/c2.jpg',
+    //   pdf: '/pdfs/arctic-adventure.pdf',
+    // },
+    // {
+    //   title: 'Mediterranean Escape',
+    //   desc: 'Sail the turquoise waters and discover hidden gems along the Mediterranean coast.',
+    //   date: 'July 2024',
+    //   location: 'Greece & Italy',
+    //   image: '/images/c4.jpg',
+    //   pdf: '/pdfs/mediterranean-escape.pdf',
+    // },
+    // {
+    //   title: 'Himalayan Trek',
+    //   desc: 'Trek through the majestic Himalayas and experience local culture and breathtaking views.',
+    //   date: 'September 2024',
+    //   location: 'Nepal',
+    //   image: '/images/c7.jpg',
+    //   pdf: '/pdfs/himalayan-trek.pdf',
+    // },
+    // {
+    //   title: 'Safari Expedition',
+    //   desc: 'Witness the Big Five and enjoy luxury camps on this unforgettable African safari.',
+    //   date: 'October 2024',
+    //   location: 'Kenya & Tanzania',
+    //   image: '/images/c5.jpg',
+    //   pdf: '/pdfs/safari-expedition.pdf',
+    // },
+    // {
+    //   title: 'Patagonia Explorer',
+    //   desc: 'Hike the wild landscapes of Patagonia and marvel at glaciers and mountain peaks.',
+    //   date: 'November 2024',
+    //   location: 'Argentina & Chile',
+    //   image: '/images/c3.jpg',
+    //   pdf: '/pdfs/patagonia-explorer.pdf',
+    // },
+    // {
+    //   title: 'Japanese Autumn',
+    //   desc: "Experience the beauty of Japan's autumn foliage and vibrant city life.",
+    //   date: 'November 2024',
+    //   location: 'Japan',
+    //   image: '/images/c9.jpg',
+    //   pdf: '/pdfs/japanese-autumn.pdf',
+    // },
   ];
   const [showAll, setShowAll] = useState(false);
   const [expandedIdx, setExpandedIdx] = useState<number | null>(null);
