@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import GallerySection from './GallerySection';
+import '../../globals.css';
 
 export default function WhiteCoatedManali() {
   return (
