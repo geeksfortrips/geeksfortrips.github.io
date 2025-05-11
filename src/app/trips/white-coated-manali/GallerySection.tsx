@@ -7,7 +7,23 @@ import Image from 'next/image';
 export default function GallerySection(): React.ReactElement {
   const [showAllImages, setShowAllImages] = useState(false);
 
-  const images = ['/images/c1.jpg', '/images/c2.jpg', '/images/c3.jpg', '/images/c4.jpg', '/images/c5.jpg', '/images/c6.jpg'];
+  const images = [
+    '/manali/m4.jpg',
+    '/manali/m7.jpg',
+    '/manali/m13.jpg',
+    '/manali/m3.jpg',
+    '/manali/m10.jpg',
+    '/manali/m6.jpg',
+    '/manali/m8.jpg',
+    '/manali/m9.jpg',
+    '/manali/m2.jpg', 
+    '/manali/m11.jpg',
+    '/manali/m15.jpg',
+    '/manali/m5.jpg',
+    '/manali/m1.jpg', 
+    '/manali/m14.jpg',
+    '/manali/m12.jpg',
+  ];
   const displayedImages = showAllImages ? images : images.slice(0, 3);
 
   return (
