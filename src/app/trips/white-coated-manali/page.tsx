@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import GallerySection from './GallerySection';
-import 'keen-slider/keen-slider.min.css';
-import '../../globals.css';
 
 export default function WhiteCoatedManali() {
   return (

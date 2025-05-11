@@ -1,3 +1,6 @@
+import './globals.css';
+import 'keen-slider/keen-slider.min.css';
+
 export const metadata = {
   title: 'GeeksforTrips',
   description: 'Travel Page',
